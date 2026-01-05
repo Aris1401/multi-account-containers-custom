@@ -1,7 +1,7 @@
 <html data-theme="auto">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Firefox Multi-Account Containers</title>
+  <title>Firefox Multi-Account Containers Custom</title>
   <script type="text/javascript" src="./js/i18n.js"></script>
   <link rel="stylesheet" href="./css/popup.css">
 </head>
@@ -121,7 +121,7 @@
 
   <div class="panel menu-panel container-panel hide" id="container-panel">
     <span class="popup-notification-card"></span>
-    <h3 class="title">Firefox Multi-Account Containers</h3>
+    <h3 class="title">Firefox Multi-Account Containers Custom</h3>
     <a href="#" class="info-icon" id="info-icon" tabindex="10">
       <img data-i18n-attribute-message-id="info" data-i18n-attribute="alt" alt="" src="/img/info.svg" / >
     </a>
@@ -159,6 +159,15 @@
           <span class="menu-text" data-i18n-message-id="alwaysOpenThisSiteIn"></span>
             <span class="menu-arrow">
               <img alt="" src="/img/arrow-icon-right.svg" />
+            </span>
+        </td>
+      </tr>
+
+      <tr class="menu-item hover-highlight keyboard-nav" id="clear-containers-data-link" tabindex="0">
+        <td>
+          <img class="menu-icon" alt="" src="/img/container-delete.svg" />
+          <span class="menu-text" data-i18n-message-id="clearContainersData"></span>
+            <span class="menu-arrow">
             </span>
         </td>
       </tr>
@@ -281,7 +290,7 @@
   <div class="panel menu-panel container-picker-panel hide" id="container-picker-panel">
     <span class="popup-notification-card"></span>
     <h3 class="title" id="picker-title">
-      Firefox Multi-Account Containers
+      Firefox Multi-Account Containers Custom
     </h3>
     <button class="btn-return arrow-left controller keyboard-nav-back" id="close-container-picker-panel" tabindex="0"></button>
     <hr>

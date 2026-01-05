@@ -780,6 +780,21 @@ Logic.registerPanel(P_CONTAINERS_LIST, {
       }
     });
 
+    Utils.addEnterHandler(document.querySelector("#clear-containers-data-link"), async () => {
+      const identities = Logic._identities;
+    
+      identities.forEach(async (identity) => {
+        const userContextId = Utils.userContextId(identity.cookieStoreId);
+        const result = await browser.runtime.sendMessage({
+          method: "deleteContainerDataOnly",
+          message: { userContextId }
+        });
+        if (result.done === true) {
+          Logic.notify({messageId: "allStorageWasClearedConfirmation"});
+        }
+      })
+    })
+
     const mozillaVpnPermissionsWarningDotName = "moz-permissions-warning-dot";
 
     let { mozillaVpnHiddenToutsList } = await browser.storage.local.get("mozillaVpnHiddenToutsList");
